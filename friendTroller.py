@@ -7,7 +7,9 @@ from selenium.common.exceptions import NoSuchElementException
 from selenium.common.exceptions import StaleElementReferenceException
 from selenium.webdriver.common.keys import Keys
 import time
-path_to_firefoxdriver = 'C:/Users/20175159/Desktop/GeckoDriver/geckodriver.exe'
+import os
+#you must create an env variable called geckodriver
+path_to_firefoxdriver = os.environ['geckodriver']
 browser = webdriver.Firefox(executable_path= path_to_firefoxdriver)
 url = 'https://web.whatsapp.com/'
 browser.get(url)
